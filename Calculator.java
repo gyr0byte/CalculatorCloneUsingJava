@@ -170,6 +170,13 @@ public class Calculator {
                 tf.setText("" + result);
             }
         });
+        clr.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                tf.setText("");
+                num1[0] = 0;
+                op[0] = '\0';
+            }
+        });
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
