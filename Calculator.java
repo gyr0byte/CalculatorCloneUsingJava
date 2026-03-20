@@ -1,3 +1,4 @@
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -126,31 +127,47 @@ public class Calculator {
             }
         });
         add.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 num1[0] = Double.parseDouble(tf.getText());
                 op[0] = '+';
                 tf.setText("");
             }
         });
         sub.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 num1[0] = Double.parseDouble(tf.getText());
                 op[0] = '-';
                 tf.setText("");
             }
         });
         mul.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 num1[0] = Double.parseDouble(tf.getText());
                 op[0] = '*';
                 tf.setText("");
             }
         });
         div.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 num1[0] = Double.parseDouble(tf.getText());
                 op[0] = '/';
                 tf.setText("");
+            }
+        });
+        eq.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                double secondNumber = Double.parseDouble(tf.getText());
+                double result = 0;
+
+                switch (op[0]) {
+                    case '+' -> result = num1[0] + secondNumber;
+                    case '-' -> result = num1[0] - secondNumber;
+                    case '*' -> result = num1[0] * secondNumber;
+                    case '/' -> result = num1[0] / secondNumber;
+                    default -> {
+                    }
+                }
+                tf.setText("" + result);
             }
         });
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
