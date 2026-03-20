@@ -1,6 +1,8 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 public class Calculator {
     public static void main(String[] args) {
@@ -121,6 +123,34 @@ public class Calculator {
         b0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 tf.setText(tf.getText() + "0");
+            }
+        });
+        add.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                num1[0] = Double.parseDouble(tf.getText());
+                op[0] = '+';
+                tf.setText("");
+            }
+        });
+        sub.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                num1[0] = Double.parseDouble(tf.getText());
+                op[0] = '-';
+                tf.setText("");
+            }
+        });
+        mul.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                num1[0] = Double.parseDouble(tf.getText());
+                op[0] = '*';
+                tf.setText("");
+            }
+        });
+        div.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                num1[0] = Double.parseDouble(tf.getText());
+                op[0] = '/';
+                tf.setText("");
             }
         });
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
