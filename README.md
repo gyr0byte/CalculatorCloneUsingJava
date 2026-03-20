@@ -149,7 +149,3 @@ git push origin feature/your-feature-name
 This project is currently unlicensed.
 
 If you want to make it open source, consider adding an MIT License file.
-
-## Author
-
-Created by **MSI**.
